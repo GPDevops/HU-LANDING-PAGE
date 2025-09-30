@@ -10,8 +10,7 @@
             "request": "launch",
             "name": "Launch Program with chrome",
             "url": "http://localhost:5500",
-            "webRoot": "${workspaceFolder}",
-            "program": "${workspaceFolder}\\js\\main.js"
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
