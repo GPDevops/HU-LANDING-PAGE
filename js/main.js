@@ -101,3 +101,37 @@ function evaluarCategoria() {
         alert("Eres bajo y no eres apto para practicar basketball, debes practicar cualquier otro deporte");
     }
 }
+
+/*Funciones para programa calculadora*/
+
+function sumar() {
+    let num1 = parseFloat(prompt("Ingrese el primer número: "));
+    let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+    let resultado = num1 + num2;
+    //alert("El resultado de la suma es: " + resultado);
+    text.innerHTML = "El resultado de la suma es: " + resultado;
+}
+
+function restar() {
+    let num1 = parseFloat(prompt("Ingrese el primer número: "));
+    let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+    let resultado = num1 - num2;
+    text.innerHTML = "El resultado de la resta es: " + resultado;
+}
+function multiplicar() {
+    let num1 = parseFloat(prompt("Ingrese el primer número: "));
+    let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+    let resultado = num1 * num2;
+    //alert("El resultado de la multiplicación es: " + resultado);
+    text.innerHTML = "El resultado de la multiplicación es: " + resultado;
+}
+function dividir() {
+    let num1 = parseFloat(prompt("Ingrese el primer número: "));
+    let num2 = parseFloat(prompt("Ingrese el segundo número: "));
+    if (num2 !== 0) {
+        let resultado = num1 / num2;
+        text.innerHTML = "El resultado de la división es: " + resultado;
+    } else {
+        text.innerHTML = "No se puede dividir entre cero.";
+    }
+}
