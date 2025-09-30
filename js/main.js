@@ -105,16 +105,28 @@ function evaluarCategoria() {
 /*Funciones para programa calculadora*/
 
 function sumar() {
+    try {
+        
+   
     let num1 = parseFloat(prompt("Ingrese el primer número: "));
     let num2 = parseFloat(prompt("Ingrese el segundo número: "));
     let resultado = num1 + num2;
+    if (isNaN(resultado)) {
+        throw "Solo se puede procesar números";
+    }else {
     //alert("El resultado de la suma es: " + resultado);
+     
     text.innerHTML = "El resultado de la suma es: " + resultado;
+     
     if (resultado <= 0) {
         //textArea.style.color = "red";
         //textArea.setAttribute("style", "background-color: red");
         textArea.className += " textAreaRojo";
     }
+    }
+    } catch (error) {
+       alert("Error en la función sumar: " + error);
+   }
 }
 
 function restar() {
