@@ -191,3 +191,27 @@ function evaluarCicloFor() {
         alert("El valor que tiene guardado en la posicion " + i + " es: " + persona[i]);
     }
 }
+
+function ejercicio () {
+    let resultado = 0;
+    for (let i = 1; i <= 3; i++) {
+        let numero = parseFloat(prompt("Ingrese el numero: "));
+        resultado += numero;
+       
+       text.innerHTML = "El resultado parcial de la suma de numeros es: " + resultado;
+    }
+   alert("El resultado final de la suma es: " + resultado);
+        
+}
+
+
+function ejercicio2 () {
+    let resultado = 0;
+    let i = 1;
+    while (i <= 3) {
+        let numero = parseFloat(prompt("Ingrese el numero: "));
+        resultado += numero;
+        i++;
+    }
+   alert("El resultado final de la suma es: " + resultado);
+}
