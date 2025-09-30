@@ -4,3 +4,8 @@ body {
 h1, h2, h3 {
     color: darkblue;
 }
+.textAreaRojo {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}

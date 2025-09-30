@@ -4,7 +4,7 @@ let namesAndSurnames = "Gonzalo Ponce";
 var x = 10;
 let precioProducto = 0;
 var esMayorDeEdad = true;
-let persona = ["Gonzalo", "Ponce", 28, true];
+let persona = ["Gonzalo", "Ponce", 28, true, "Argentina"]; //array
 const PROGRAM_NAME = "APLICAION DE LOGICA DE PROGRAMACION";
 
 var text = document.getElementById("textArea");
@@ -110,6 +110,11 @@ function sumar() {
     let resultado = num1 + num2;
     //alert("El resultado de la suma es: " + resultado);
     text.innerHTML = "El resultado de la suma es: " + resultado;
+    if (resultado <= 0) {
+        //textArea.style.color = "red";
+        //textArea.setAttribute("style", "background-color: red");
+        textArea.className += " textAreaRojo";
+    }
 }
 
 function restar() {
@@ -117,6 +122,11 @@ function restar() {
     let num2 = parseFloat(prompt("Ingrese el segundo número: "));
     let resultado = num1 - num2;
     text.innerHTML = "El resultado de la resta es: " + resultado;
+    if (resultado <= 0) {
+        //textArea.style.color = "red";
+        //textArea.setAttribute("style", "background-color: red");
+        textArea.className += " textAreaRojo";
+    }
 }
 function multiplicar() {
     let num1 = parseFloat(prompt("Ingrese el primer número: "));
@@ -124,6 +134,11 @@ function multiplicar() {
     let resultado = num1 * num2;
     //alert("El resultado de la multiplicación es: " + resultado);
     text.innerHTML = "El resultado de la multiplicación es: " + resultado;
+    if (resultado <= 0) {
+        //textArea.style.color = "red";
+        //textArea.setAttribute("style", "background-color: red");
+        //textArea.className += " textAreaRojo";
+    }
 }
 function dividir() {
     let num1 = parseFloat(prompt("Ingrese el primer número: "));
@@ -131,7 +146,36 @@ function dividir() {
     if (num2 !== 0) {
         let resultado = num1 / num2;
         text.innerHTML = "El resultado de la división es: " + resultado;
+     
     } else {
         text.innerHTML = "No se puede dividir entre cero.";
+    }
+}
+
+/*Ciclo while
+El ciclo while es una estructura de control que permite ejecutar un bloque de codigo mientras una condicion sea verdadera.
+la sintaxis es la siguiente:*/
+
+function evaluar() {
+    let contador = 0;
+    while (contador < 5) {
+        let numero = parseFloat(prompt("Ingrese un número: "));
+        if (numero > 0) {
+            alert("El número es positivo");
+        } else if (numero < 0) {
+            alert("El número es negativo");
+        } else {
+            alert("El número es cero");
+        }
+        contador++;
+    }
+}
+
+//let persona = ["Gonzalo", "Ponce", 28, true, "Argentina"]; //array
+
+function evaluarCicloFor() {
+    for (let i = 0; i < persona.length; i++) {
+        //console.log(persona[i]);
+        alert("El valor que tiene guardado en la posicion " + i + " es: " + persona[i]);
     }
 }
